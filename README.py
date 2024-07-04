@@ -17,21 +17,45 @@
 # 
 # Um `shell` é uma interface de linha de comando que permite aos usuários interagirem com um sistema operacional por meio de comandos de texto. Ele interpreta os comandos inseridos pelo usuário e os executa, facilitando a manipulação de arquivos, a execução de programas e outras tarefas do sistema. Além disso, os shells também oferecem recursos avançados, como redirecionamento de entrada e saída, expansão de comandos e controle de processos. Exemplos comuns incluem o `Bash`, o `Zsh` e o `PowerShell`.
 # 
+
 # ### `bash`
 # 
 # `Bash`, ou `Bourne Again Shell`, é um `shell` de linha de comando amplamente utilizado em sistemas operacionais Unix e `Linux`. Ele oferece uma variedade de recursos, como expansão de comandos, redirecionamento de entrada/saída, _scripts_ de `shell` e controle de processos. O `Bash` é altamente personalizável e suporta automação de tarefas por meio de _scripts_, tornando-o uma ferramenta poderosa para usuários avançados e administradores de sistemas. Sua sintaxe simples e intuitiva o torna acessível para iniciantes, enquanto sua flexibilidade e extensibilidade o tornam uma escolha popular entre profissionais de TI.
 # 
+
 # ### `zsh`
 # 
 # O `oh-my-zsh`, ou `Z Shell`, é um interpretador de `shell` de código aberto e uma alternativa avançada ao `bash` (`Bourne Again Shell`), que é comumente usado em sistemas Unix e Linux. O `oh-my-zsh` oferece uma série de recursos avançados, como autocompletamento poderoso, histórico de comandos expandido, personalização flexível da aparência e do comportamento do `shell`, além de suporte a plugins e temas. Sua interface de linha de comando aprimorada e recursos de automação tornam-no uma escolha popular entre desenvolvedores, administradores de sistema e entusiastas de terminal que desejam uma experiência de linha de comando mais produtiva e personalizável. O `oh-my-zsh` é altamente configurável e pode ser estendido por meio de plugins, tornando-o uma ferramenta versátil para trabalhar com eficiência no ambiente `Unix` e `Linux`.
 # 
+
 # ### `oh-my-zsh`
 # 
 # `Oh-my-zsh` é um _framework_ de código aberto para gerenciar a configuração do _shell_ `Zsh`, fornecendo um conjunto de plugins, temas e ferramentas para aprimorar a experiência do usuário. Ele simplifica a personalização do ambiente de linha de comando, oferecendo recursos como autocompletar, atalhos de teclado e sugestões contextuais, aumentando a produtividade e a eficiência dos usuários. Com uma comunidade ativa e uma grande variedade de extensões disponíveis, o `Oh-my-zsh` é amplamente utilizado por desenvolvedores e usuários avançados para customizar e otimizar o ambiente de terminal.
 # 
+
+# ### `powerlevel10k`
+# 
+# O `Powerlevel10k` é um tema altamente configurável para o terminal `Zsh`, conhecido por sua velocidade e eficiência. Ele oferece uma experiência personalizável ao usuário, com uma configuração inicial rápida e opções avançadas para ajustar o estilo e os elementos exibidos no prompt de comando. O `Powerlevel10`k suporta ícones, diferentes estilos de prompt, exibição de informações contextuais e é projetado para ser rápido mesmo em ambientes com muitos plugins e configurações adicionais.
+# 
+
 # ### `zinit`
 # 
 # O `Zinit` é um gerenciador de plugins e temas para o `Zsh`, projetado para simplificar e otimizar o processo de personalização do ambiente de linha de comando. Com recursos avançados de carregamento assíncrono, ele oferece uma inicialização rápida do shell, permitindo aos usuários instalar e atualizar facilmente extensões, temas e utilitários adicionais. Além disso, o `Zinit` suporta a configuração flexível de plugins, garantindo compatibilidade com diferentes workflows e necessidades de desenvolvimento. Com uma sintaxe intuitiva e uma vasta biblioteca de extensões disponíveis, o `Zinit` é uma ferramenta poderosa para aumentar a produtividade e a eficiência dos usuários do Zsh.
+# 
+
+# ### `zsh-completions`
+# 
+# O `zsh-completions` é um _plugin_ para o `shell` `zsh` que sugere automaticamente comandos com base no histórico de entrada do usuário. Ele funciona destacando uma sugestão na linha de comando, baseada no que o usuário começou a digitar, facilitando a reutilização de comandos anteriores de maneira eficiente. Isso não apenas economiza tempo, mas também reduz erros ao lembrar comandos frequentemente usados.
+# 
+
+# ### `zsh-completions`
+# 
+# O `zsh-completions` é um conjunto de _scripts_ de conclusão automática para o `shell` `zsh`, projetado para melhorar a experiência do usuário ao fornecer conclusões detalhadas e precisas para comandos, argumentos de comandos e opções. Ele amplia significativamente a funcionalidade do `shell` `zsh`, permitindo que os usuários completem rapidamente comandos complexos e evitem erros de sintaxe, aumentando assim a eficiência na linha de comando.
+# 
+
+# ### `fast-syntax-highlighting`
+# 
+# O `fast-syntax-highlighting` é um _plugin_ para o `shell` `fish` que oferece realce de sintaxe rápido e responsivo para comandos e scripts. Ele melhora a experiência do usuário ao proporcionar cores distintas para diferentes elementos de linguagem, facilitando a leitura e a compreensão de código diretamente no terminal. Essa funcionalidade ajuda os usuários a identificar erros de sintaxe mais rapidamente e a escrever scripts de forma mais eficiente no `shell` `fish`.
 # 
 
 # ## 1. Como configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` [1][3]
@@ -59,20 +83,23 @@
 #     2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
 #     
 
+# ### Configurar/Instalar/Usar o `oh-my-zsh`
+# 
 # Para configurar/instalar/usar o `oh-my-zsh` em um sistema `Linux Ubuntu`, você pode seguir estes passos:
 # 
 # 1. Primeiro, instale o `oh-my-zsh` com o comando: `sudo apt install zsh -y`
 # 
 # 2. **Instalar os pacotes `curl` e `git`**: `sudo apt install curl git -y`
 # 
-
 # 3. **Instalar o `oh-my-zsh`**: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+# ### Configurar/Instalar/Usar o `zinit`
 # 
-# 4. **Instalar o `zinit`**: `bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
+# 1. **Instalar o `zinit`**: `bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
 # 
-# 5. **Abrir o arquivo `~/.zshrc`**: `sudo nano ~/.zshrc`
+# 2. **Abrir o arquivo `~/.zshrc`**: `sudo nano ~/.zshrc`
 # 
-# 6. **Editar o arquivo `~/.zshrc`**:
+# 3. **Editar o arquivo `~/.zshrc`**:
 # 
 #     ```
 #     # Adicionar no final do .zshrc
@@ -81,73 +108,83 @@
 #     zinit light zsh-users/zsh-completions
 #     ```
 # 
-# 7. Fechar o `Terminal Emulator` e abrir novamente
-# 
-# 8. **Criar diretório**: `mkdir ~/.fonts`
-# 
-# 9. **Baixar fonte**: `wget -P ~/.fonts 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/BitstreamVeraSansMono.zip'` 
-# 
-# 10. **Descompactar fonte**: `unzip ~/.fonts/BitstreamVeraSansMono.zip -d ~/.fonts`
-# 
-# 11. **Instalar a fonte `firacode`**: `sudo apt install fonts-firacode -y`
-# 
-# 12. Fechar o `Terminal Emulator` e abrir novamente
-# 
-# 13. Clicar na aba: `Edit`
-# 
-# 14. Clicar em `Preferences...`
-# 
-# 15. No campo `Font` clicar na fonte e alterar para `Fira Code Regular`
-# 
-# 16. **Instalar o tema `powerlevel10k`**: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
-# 
-# 17. **Inserir o `powerlever10k` no arquivo de configuração do `zshrc**: `echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
-# 
-# 18. **Abrir o arquivo `~/.zshrc`**: `sudo nano ~/.zshrc`
-# 
-# 19. **Editar o arquivo `~/.zshrc`**: `ZSH_THEME="powerlevel10k/powerlevel10k"`
+# 4. Fechar o `Terminal Emulator` e abrir novamente
 # 
 
-# 20. Fechar o `Terminal Emulator` e abrir novamente
+# ### Configurar/Instalar/Usar a fonte `fira code`
 # 
-# 21. Confirmar os símbos que estiver vendo para que a configuração reconheca e configure corretamente.
+# 1. **Criar diretório**: `mkdir ~/.fonts`
 # 
-# 22. Em `Prompt Style` escolha a opção:  `(3) Rainbow.`
+# 2. **Baixar fonte**: `wget -P ~/.fonts 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/BitstreamVeraSansMono.zip'` 
 # 
-# 23. Em `Character Set` escolha a opção:  `(1) Unicode.`
+# 3. **Descompactar fonte**: `unzip ~/.fonts/BitstreamVeraSansMono.zip -d ~/.fonts`
 # 
-# 24. Em `Show current time?` escolha a opção:  `(2) 24-hour format.`
+# 4. **Instalar a fonte `firacode`**: `sudo apt install fonts-firacode -y`
 # 
-# 25. Em `Prompt Separators` escolha a opção:  `(1) Angled.`
+# 5. Fechar o `Terminal Emulator` e abrir novamente
 # 
-# 26. Em `Prompt Heads` escolha a opção:  `(3) Sharp.`
+# 6. Clicar na aba: `Edit`
 # 
-# 27. Em `Prompt Tails` escolha a opção:  `(2) Bluerred.`
+# 7. Clicar em `Preferences...`
 # 
-# 28. Em `Prompt Height` escolha a opção:  `(2) Two lines.`
+# 8. No campo `Font` clicar na fonte e alterar para `Fira Code Regular`
 # 
-# 29. Em `Prompt Connection` escolha a opção:  `(3) Solid.`
+
+# ### Configurar/Instalar/Usar o tema `powerlevel10k`
 # 
-# 30. Em `Prompt Frame` escolha a opção:  `(2) Left.`
+# 1. **Instalar o tema `powerlevel10k`**: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
 # 
-# 31. Em `Connection & Frame Color` escolha a opção:  `(1) Lightest.`
+# 2. **Inserir o `powerlever10k` no arquivo de configuração do `zshrc`**: `echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
 # 
-# 32. Em `Prompt Spacing` escolha a opção:  `(2) Sparse.`
+# 3. **Abrir o arquivo `~/.zshrc`**: `sudo nano ~/.zshrc`
 # 
-# 33. Em `Icons` escolha a opção:  `(2) Many icons.`
+# 4. **Editar o arquivo `~/.zshrc` alterar a linha, como segue**: `ZSH_THEME="powerlevel10k/powerlevel10k"`
 # 
-# 34. Em `Prompt Flow` escolha a opção:  `(2) Fluent.`
+# 5. Fechar o `Terminal Emulator` e abrir novamente
 # 
-# 35. Em `Enable Transient Prompt` escolha a opção:  `(n) No.`
+
+# #### Configurar o `powerlevel10k`
 # 
-# 36. Em `Instant Prompt Mode` escolha a opção:  `(1) Verbose (recommended).`
+# 1. Confirmar os símbos que estiver vendo para que a configuração reconheca e configure corretamente.
 # 
-# 37. Em `Apply changes to ~/.zshrc` escolha a opção:  `(y) Yes (recommended).`
+# 2. Em `Prompt Style` escolha a opção:  `(3) Rainbow.`
 # 
-# 38. **Clone o repositório**: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+# 3. Em `Character Set` escolha a opção:  `(1) Unicode.`
 # 
-# 39. Execute o comando: `ls -l -- ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+# 4. Em `Show current time?` escolha a opção:  `(2) 24-hour format.`
 # 
+# 5. Em `Prompt Separators` escolha a opção:  `(1) Angled.`
+# 
+# 6. Em `Prompt Heads` escolha a opção:  `(3) Sharp.`
+# 
+# 7. Em `Prompt Tails` escolha a opção:  `(2) Bluerred.`
+# 
+# 8. Em `Prompt Height` escolha a opção:  `(2) Two lines.`
+# 
+# 9. Em `Prompt Connection` escolha a opção:  `(3) Solid.`
+# 
+# 10. Em `Prompt Frame` escolha a opção:  `(2) Left.`
+# 
+# 11. Em `Connection & Frame Color` escolha a opção:  `(1) Lightest.`
+# 
+# 12. Em `Prompt Spacing` escolha a opção:  `(2) Sparse.`
+# 
+# 13. Em `Icons` escolha a opção:  `(2) Many icons.`
+# 
+# 14. Em `Prompt Flow` escolha a opção:  `(2) Fluent.`
+# 
+# 15. Em `Enable Transient Prompt` escolha a opção:  `(n) No.`
+# 
+# 16. Em `Instant Prompt Mode` escolha a opção:  `(1) Verbose (recommended).`
+# 
+# 17. Em `Apply changes to ~/.zshrc` escolha a opção:  `(y) Yes (recommended).`
+# 
+
+# #### Reconfigurar o `powerlevel10k`
+# 
+# 1. Para reconfigurar o `Powerlevel10k` no `Zsh`, você pode executar o comando de configuração fornecido pelo próprio tema. Abra o terminal e digite o seguinte: `p10k configure`
+# 
+# Isso iniciará o assistente de configuração do `Powerlevel10k`, onde você poderá escolher várias opções para personalizar o visual e o comportamento do seu `prompt` de comando. Se você tiver algum arquivo de configuração anterior, como `~/.p10k.zsh`, o assistente pode usar essas configurações como base ou você pode começar uma nova configuração do zero.
 
 # ### 1.1 Configurar o `oh-my-zsh` como seu `shell` padrão
 # 
@@ -172,7 +209,7 @@
 # 
 # 1. No `Terminal Emulator`, na barra de ferramentas, clicar em: `Edit`
 # 
-# 2. Clique em: `Prefeeences`
+# 2. Clique em: `Preferences`
 # 
 # 3. Clique na aba `Appearence`
 # 
@@ -208,80 +245,7 @@
 #     ```
 # 
 
-# ## 2. Habilitar o `autosuggestions` (auto-sugestões ou auto-completar) no `oh-my-zsh`
-# 
-# O recurso que você está descrevendo é conhecido como `autosuggestions` (auto-sugestões ou auto-completar), que exibe comandos anteriores que você digitou que começam com o que você está digitando atualmente. No `oh-my-zsh`, isso geralmente é realizado pelo _plugin_ `zsh-autosuggestions`, você pode instalar o _plugin_ manualmente.
-# 
-# Aqui estão as etapas para instalar o _plugin_ `zsh-autosuggestions` sem usar o Oh My `oh-my-zsh`:
-# 
-# 1. **Clone o Repositório do Plugin:** Abra um terminal e execute o seguinte comando para clonar o _plugin_ para o diretório de plugins do `oh-my-zsh`: `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions`
-# 
-# 2. **Adicione o Plugin ao Seu Arquivo `.zshrc`:** Você precisará adicionar uma linha ao seu arquivo `.zshrc` para carregar o _plugin_. Abra o arquivo `.zshrc` com um editor de texto: `sudo nano ~/.zshrc`
-# 
-# 3. **E adicione a seguinte linha no final do arquivo:**
-# 
-#     ```
-#     plugins=(git sudo zsh-autosuggestions)
-#     source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-#     ``````
-# 
-# 4. **Configure as Cores das Sugestões (opcional):** Se você quiser personalizar a cor das sugestões para que sejam mais claras ou correspondam ao seu esquema de cores do terminal, adicione o seguinte ao seu `.zshrc`: `ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'`
-# 
-#     Ajuste o valor `'fg=10'` (compatível com o esquema de cores `Tango`) para a cor desejada conforme as configurações do seu terminal.
-# 
-# 5. **Recarregue o Seu Arquivo `.zshrc`:** Depois de salvar suas alterações, você pode recarregar o arquivo de configuração com: `source ~/.zshrc`
-# 
-# 6. **Verifique se Está Funcionando:** Após recarregar o arquivo `.zshrc`, comece a digitar um comando que você usou anteriormente. As sugestões devem aparecer automaticamente.
-# 
-# Após realizar esses passos, quando você começar a digitar um comando no terminal, o _plugin_ `zsh-autosuggestions` mostrará sugestões com base nos seus comandos anteriores, com a sugestão exibida em uma cor mais clara. Você pode aceitar a sugestão pressionando a tecla de seta para a direita.
-# 
-# Espero que isso ajude a configurar as auto-sugestões no seu terminal `oh-my-zsh`. Se você encontrar algum problema, certifique-se de que o caminho para o _script_ `zsh-autosuggestions`.zsh está correto e que o _plugin_ foi clonado para o local correto.
-# 
-# Se você estiver usando o `bash` e quiser um recurso similar, você precisaria de uma configuração diferente, já que o `zsh-autosuggestions` é específico para o `oh-my-zsh`. No `bash`, o recurso mais próximo é o `history search`, que pode ser habilitado com algumas configurações no arquivo `.bashrc`.
-# 
-
-# ## 3. Alterar o símbolo que aparece entre o nome de usuário e o `host`
-# 
-# Para alterar o símbolo que aparece entre o seu nome de usuário e o nome do `host` no seu prompt do `oh-my-zsh`, você precisará modificar a variável `PROMPT` (ou `PS1` em alguns casos) no seu arquivo `.zshrc`.
-# 
-# 1. **Abra o arquivo `.zshrc` no editor de texto:** `sudo nano ~/.zshrc`
-# 
-# 2. Localize a parte do arquivo onde a variável `PROMPT` é definida. Você mencionou que quer mudar o símbolo de `㉿` para `@`. Você deve procurar por uma linha que tenha algo similar a isto:
-# 
-#     ```
-#     configure_prompt() {
-#     prompt_symbol=@ # ESTA É A LINHA QUE DEVE SER ALTERADA
-#     # Skull emoji for root terminal
-#     #[ "$EUID" -eq 0 ] && prompt_symbol=💀
-#     case "$PROMPT_ALTERNATIVE" in
-#         twoline)
-#             PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)─}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))─}(%B%F{%(#.red.blue)}%n'$prompt_symbol$'%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
-#             # Right-side prompt with exit codes and background processes
-#             #RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
-#             ;;
-#         oneline)
-#             PROMPT=$'${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%B%F{%(#.red.blue)}%n@%m%b%F{reset}:%B%F{%(#.blue.green)}%~%b%F{reset}%(#.#.$) '
-#             RPROMPT=
-#             ;;
-#         backtrack)
-#             PROMPT=$'${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%B%F{red}%n@%m%b%F{reset}:%B%F{blue}%~%b%F{reset}%(#.#.$) '
-#             RPROMPT=
-#             ;;
-#     esac
-#     unset prompt_symbol
-#     }
-#     ```
-# 
-# 3. **Altere o `㉿` para `@` assim:** `prompt_symbol=@`
-# 
-# 4. Salve o arquivo e saia do editor (em `nano`, você faz isso com `Ctrl+X`, confirma as mudanças com `Y` e depois pressiona `Enter`).
-# 
-# 5. Depois de salvar o arquivo, você pode aplicar as alterações imediatamente com: `source ~/.zshrc`
-# 
-#     Ou simplesmente fechar e reabrir o terminal.
-# 
-
-# ## 5. Mudar o seu `shell` de volta para o `bash` (ou outro `shell` de sua preferência) com o comando
+# ## 2. Mudar o seu `shell` de volta para o `bash` (ou outro `shell` de sua preferência) com o comando
 # 
 # 1. Finalmente, mude o seu `shell` de volta para o `bash` (ou outro `shell` de sua preferência) com o comando: `sudo chsh -s /bin/bash`
 # 
@@ -290,11 +254,11 @@
 # 2. **Iniciar o `bash` Manualmente:** Caso NÃO funcione, como solução temporária, você pode iniciar o `bash` manualmente em um terminal do `oh-my-zsh`, simplesmente digitando bash. Isso não muda seu `shell` padrão, mas inicia uma sessão do `bash` naquele terminal específico.
 # 
 
-# ## 6. Alterar a opacidade/transparência do `Terminal Emulator`
+# ## 3. Alterar a opacidade/transparência do `Terminal Emulator`
 # 
 # A referência específica à transparência padrão do terminal no `Kali Linux` não é mencionada diretamente nas fontes. No entanto, uma prática comum é definir a transparência do painel do terminal para cerca de `5%`, para dar uma aparência estilizada, como mencionado em um guia de personalização do ambiente de desktop `xfce` no `Kali Linux​​`. Isso indica que a transparência padrão pode ser definida para um valor baixo ou até mesmo desativada por padrão, com a opção de ajuste conforme a preferência do usuário.
 # 
-# No entanto, se você deseja ajustar ou verificar a transparência do seu terminal no Kali Linux, você geralmente pode fazer isso através das preferências do próprio terminal. Por exemplo, no GNOME Terminal, você pode seguir estes passos:
+# No entanto, se você deseja ajustar ou verificar a transparência do seu terminal no `Kali Linux`, você geralmente pode fazer isso através das preferências do próprio terminal. Por exemplo, no GNOME Terminal, você pode seguir estes passos:
 # 
 # 1. Abra o `Terminal Emulator`.
 # 
@@ -303,19 +267,6 @@
 # 3. Na aba `“Appearance”`, você encontrará um controle deslizante para ajustar a opacidade/transparência do fundo do terminal.
 # 
 # É importante observar que essas configurações podem variar dependendo do emulador de terminal que você está usando. Além disso, a capacidade de ajustar a transparência pode depender de outros fatores do sistema, como os efeitos gráficos habilitados no seu ambiente de desktop.
-
-# 7. Desinstalar o `shell` `oh-my-zsh`
-# 
-# Para desinstalar o zsh e limpar as configurações no Ubuntu pelo terminal, você pode seguir estes passos:
-# 
-# 1. **Desinstalar o `oh-my-zsh`:** `sudo apt remove --purge zsh`
-# 
-# 2. **Remover as configurações pessoais:** Apague o diretório de configuração do `oh-my-zsh` no seu diretório `home`: `rm -rf ~/.zsh ~/.zshrc`
-# 
-# 3. **Mudar o `shell` padrão de volta para o `bash`**: Para voltar para o `bash` como seu `shell` padrão, execute: `chsh -s /bin/bash`
-# 
-# Lembre-se de que você precisará fechar e reabrir o terminal ou reiniciar a sessão para que as alterações entrem em vigor. Isso removerá o `zsh` e suas configurações do seu sistema.
-# 
 
 # ## 7. Desinstalar o `oh-my-zsh`
 # 
