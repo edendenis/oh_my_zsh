@@ -61,10 +61,11 @@
 
 # Para configurar/instalar/usar o `oh-my-zsh` em um sistema `Linux Ubuntu`, você pode seguir estes passos:
 # 
-# 1. Primeiro, instale o `oh-my-zsh` com o comando: `sudo apt install zsh -y`    
-
+# 1. Primeiro, instale o `oh-my-zsh` com o comando: `sudo apt install zsh -y`
+# 
 # 2. **Instalar os pacotes `curl` e `git`**: `sudo apt install curl git -y`
 # 
+
 # 3. **Instalar o `oh-my-zsh`**: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 # 
 # 4. **Instalar o `zinit`**: `bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
@@ -197,7 +198,7 @@
 # 2. Digite o seguinte comando e pressione `Enter`:
 # 
 #     ```
-#     sudo apt clean                                                            
+#     sudo apt clean
 #     sudo apt autoclean
 #     sudo apt autoremove -y
 #     sudo apt update
