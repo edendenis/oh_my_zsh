@@ -12,19 +12,19 @@ _This document contains the main commands for configuring/installing/use `oh-my-
 
 ### `shell`
 
-Um `shell` é uma interface de linha de comando que permite aos usuários interagirem com um sistema operacional por meio de comandos de texto. Ele interpreta os comandos inseridos pelo usuário e os executa, facilitando a manipulação de arquivos, a execução de programas e outras tarefas do sistema. Além disso, os shells também oferecem recursos avançados, como redirecionamento de entrada e saída, expansão de comandos e controle de processos. Exemplos comuns incluem o Bash, o `Zsh` e o `PowerShell`.
+Um `shell` é uma interface de linha de comando que permite aos usuários interagirem com um sistema operacional por meio de comandos de texto. Ele interpreta os comandos inseridos pelo usuário e os executa, facilitando a manipulação de arquivos, a execução de programas e outras tarefas do sistema. Além disso, os shells também oferecem recursos avançados, como redirecionamento de entrada e saída, expansão de comandos e controle de processos. Exemplos comuns incluem o `Bash`, o `Zsh` e o `PowerShell`.
 
 ### `bash`
 
-`Bash`, ou `Bourne Again Shell`, é um `shell` de linha de comando amplamente utilizado em sistemas operacionais Unix e `Linux`. Ele oferece uma variedade de recursos, como expansão de comandos, redirecionamento de entrada/saída, scripts de `shell` e controle de processos. O Bash é altamente personalizável e suporta automação de tarefas por meio de scripts, tornando-o uma ferramenta poderosa para usuários avançados e administradores de sistemas. Sua sintaxe simples e intuitiva o torna acessível para iniciantes, enquanto sua flexibilidade e extensibilidade o tornam uma escolha popular entre profissionais de TI.
+`Bash`, ou `Bourne Again Shell`, é um `shell` de linha de comando amplamente utilizado em sistemas operacionais Unix e `Linux`. Ele oferece uma variedade de recursos, como expansão de comandos, redirecionamento de entrada/saída, _scripts_ de `shell` e controle de processos. O `Bash` é altamente personalizável e suporta automação de tarefas por meio de _scripts_, tornando-o uma ferramenta poderosa para usuários avançados e administradores de sistemas. Sua sintaxe simples e intuitiva o torna acessível para iniciantes, enquanto sua flexibilidade e extensibilidade o tornam uma escolha popular entre profissionais de TI.
 
 ### `zsh`
 
-O `oh-my-zsh`, ou `Z Shell`, é um interpretador de `shell` de código aberto e uma alternativa avançada ao `bash` (`Bourne Again Shell`), que é comumente usado em sistemas Unix e Linux. O `oh-my-zsh` oferece uma série de recursos avançados, como autocompletamento poderoso, histórico de comandos expandido, personalização flexível da aparência e do comportamento do `shell`, além de suporte a plugins e temas. Sua interface de linha de comando aprimorada e recursos de automação tornam-no uma escolha popular entre desenvolvedores, administradores de sistema e entusiastas de terminal que desejam uma experiência de linha de comando mais produtiva e personalizável. O `oh-my-zsh` é altamente configurável e pode ser estendido por meio de plugins, tornando-o uma ferramenta versátil para trabalhar com eficiência no ambiente Unix e Linux.
+O `oh-my-zsh`, ou `Z Shell`, é um interpretador de `shell` de código aberto e uma alternativa avançada ao `bash` (`Bourne Again Shell`), que é comumente usado em sistemas Unix e Linux. O `oh-my-zsh` oferece uma série de recursos avançados, como autocompletamento poderoso, histórico de comandos expandido, personalização flexível da aparência e do comportamento do `shell`, além de suporte a plugins e temas. Sua interface de linha de comando aprimorada e recursos de automação tornam-no uma escolha popular entre desenvolvedores, administradores de sistema e entusiastas de terminal que desejam uma experiência de linha de comando mais produtiva e personalizável. O `oh-my-zsh` é altamente configurável e pode ser estendido por meio de plugins, tornando-o uma ferramenta versátil para trabalhar com eficiência no ambiente `Unix` e `Linux`.
 
 ### `oh-my-zsh`
 
-`Oh-my-zsh` é um framework de código aberto para gerenciar a configuração do shell `Zsh`, fornecendo um conjunto de plugins, temas e ferramentas para aprimorar a experiência do usuário. Ele simplifica a personalização do ambiente de linha de comando, oferecendo recursos como autocompletar, atalhos de teclado e sugestões contextuais, aumentando a produtividade e a eficiência dos usuários. Com uma comunidade ativa e uma grande variedade de extensões disponíveis, o Oh-my-zsh é amplamente utilizado por desenvolvedores e usuários avançados para customizar e otimizar o ambiente de terminal.
+`Oh-my-zsh` é um _framework_ de código aberto para gerenciar a configuração do _shell_ `Zsh`, fornecendo um conjunto de plugins, temas e ferramentas para aprimorar a experiência do usuário. Ele simplifica a personalização do ambiente de linha de comando, oferecendo recursos como autocompletar, atalhos de teclado e sugestões contextuais, aumentando a produtividade e a eficiência dos usuários. Com uma comunidade ativa e uma grande variedade de extensões disponíveis, o `Oh-my-zsh` é amplamente utilizado por desenvolvedores e usuários avançados para customizar e otimizar o ambiente de terminal.
 
 ### `zinit`
 
@@ -96,56 +96,54 @@ Para configurar/instalar/usar o `oh-my-zsh` em um sistema `Linux Ubuntu`, você 
 
 15. No campo `Font` clicar na fonte e alterar para `Fira Code Regular`
 
-16. **Instalar o tema `powerlevel10k`**:
+16. **Instalar o tema `powerlevel10k`**: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
 
-    ```
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-    ```
+17. **Inserir o `powerlever10k` no arquivo de configuração do `zshrc**: `echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
 
-17. **Abrir o arquivo `~/.zshrc`**: `sudo nano ~/.zshrc`
+18. **Abrir o arquivo `~/.zshrc`**: `sudo nano ~/.zshrc`
 
-18. **Editar o arquivo `~/.zshrc`**: `ZSH_THEME="powerlevel10k/powerlevel10k"`
+19. **Editar o arquivo `~/.zshrc`**: `ZSH_THEME="powerlevel10k/powerlevel10k"`
 
-19. Fechar o `Terminal Emulator` e abrir novamente
 
-20. Confirmar os símbos que estiver vendo para que a configuração reconheca e configure corretamente.
+20. Fechar o `Terminal Emulator` e abrir novamente
 
-21. Em `Prompt Style` escolha a opção:  `(3) Rainbow.`
+21. Confirmar os símbos que estiver vendo para que a configuração reconheca e configure corretamente.
 
-22. Em `Character Set` escolha a opção:  `(1) Unicode.`
+22. Em `Prompt Style` escolha a opção:  `(3) Rainbow.`
 
-23. Em `Show current time?` escolha a opção:  `(2) 24-hour format.`
+23. Em `Character Set` escolha a opção:  `(1) Unicode.`
 
-24. Em `Prompt Separators` escolha a opção:  `(1) Angled.`
+24. Em `Show current time?` escolha a opção:  `(2) 24-hour format.`
 
-25. Em `Prompt Heads` escolha a opção:  `(3) Sharp.`
+25. Em `Prompt Separators` escolha a opção:  `(1) Angled.`
 
-26. Em `Prompt Tails` escolha a opção:  `(1) Flat.`
+26. Em `Prompt Heads` escolha a opção:  `(3) Sharp.`
 
-27. Em `Prompt Height` escolha a opção:  `(2) Two lines.`
+27. Em `Prompt Tails` escolha a opção:  `(2) Bluerred.`
 
-28. Em `Prompt Connection` escolha a opção:  `(3) Solid.`
+28. Em `Prompt Height` escolha a opção:  `(2) Two lines.`
 
-29. Em `Prompt Frame` escolha a opção:  `(4) Full.`
+29. Em `Prompt Connection` escolha a opção:  `(3) Solid.`
 
-30. Em `Connection & Frame Color` escolha a opção:  `(1) Lightest.`
+30. Em `Prompt Frame` escolha a opção:  `(2) Left.`
 
-31. Em `Prompt Spacing` escolha a opção:  `(2) Sparse.`
+31. Em `Connection & Frame Color` escolha a opção:  `(1) Lightest.`
 
-32. Em `Icons` escolha a opção:  `(2) Many icons.`
+32. Em `Prompt Spacing` escolha a opção:  `(2) Sparse.`
 
-33. Em `Prompt Flow` escolha a opção:  `(1) Concise.`
+33. Em `Icons` escolha a opção:  `(2) Many icons.`
 
-34. Em `Enable Transient Prompt` escolha a opção:  `(n) No.`
+34. Em `Prompt Flow` escolha a opção:  `(2) Fluent.`
 
-35. Em `Instant Prompt Mode` escolha a opção:  `(1) Verbose (recommended).`
+35. Em `Enable Transient Prompt` escolha a opção:  `(n) No.`
 
-36. Em `Apply changes to ~/.zshrc` escolha a opção:  `(y) Yes (recommended).`
+36. Em `Instant Prompt Mode` escolha a opção:  `(1) Verbose (recommended).`
 
-37. **Clone o repositório**: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+37. Em `Apply changes to ~/.zshrc` escolha a opção:  `(y) Yes (recommended).`
 
-38. Execute o comando: `ls -l -- ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+38. **Clone o repositório**: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+
+39. Execute o comando: `ls -l -- ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
 
 
 ### 1.1 Configurar o `oh-my-zsh` como seu `shell` padrão
@@ -162,7 +160,7 @@ Para configurar/instalar/usar o `oh-my-zsh` em um sistema `Linux Ubuntu`, você 
 
     Ou simplesmente feche e reabra o terminal.
 
-Esses passos devem ajudar a configurar o `oh-my-zsh` com o tema e os plugins desejados. Se tiver dificuldades com algum plugin específico, pode ser útil consultar a documentação do Oh My `oh-my-zsh` ou procurar ajuda específica para aquele plugin.
+Esses passos devem ajudar a configurar o `oh-my-zsh` com o tema e os plugins desejados. Se tiver dificuldades com algum _plugin_ específico, pode ser útil consultar a documentação do Oh My `oh-my-zsh` ou procurar ajuda específica para aquele _plugin_.
 
 
 ## 1. Ajustes
@@ -171,7 +169,7 @@ Esses passos devem ajudar a configurar o `oh-my-zsh` com o tema e os plugins des
 
 1. No `Terminal Emulator`, na barra de ferramentas, clicar em: `Edit`
 
-2. Clique em: `Preferênces`
+2. Clique em: `Prefeeences`
 
 3. Clique na aba `Appearence`
 
@@ -209,13 +207,13 @@ Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` sem precisar digit
 
 ## 2. Habilitar o `autosuggestions` (auto-sugestões ou auto-completar) no `oh-my-zsh`
 
-O recurso que você está descrevendo é conhecido como `autosuggestions` (auto-sugestões ou auto-completar), que exibe comandos anteriores que você digitou que começam com o que você está digitando atualmente. No `oh-my-zsh`, isso geralmente é realizado pelo plugin `zsh-autosuggestions`, você pode instalar o plugin manualmente.
+O recurso que você está descrevendo é conhecido como `autosuggestions` (auto-sugestões ou auto-completar), que exibe comandos anteriores que você digitou que começam com o que você está digitando atualmente. No `oh-my-zsh`, isso geralmente é realizado pelo _plugin_ `zsh-autosuggestions`, você pode instalar o _plugin_ manualmente.
 
-Aqui estão as etapas para instalar o plugin `zsh-autosuggestions` sem usar o Oh My `oh-my-zsh`:
+Aqui estão as etapas para instalar o _plugin_ `zsh-autosuggestions` sem usar o Oh My `oh-my-zsh`:
 
-1. **Clone o Repositório do Plugin:** Abra um terminal e execute o seguinte comando para clonar o plugin para o diretório de plugins do `oh-my-zsh`: `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions`
+1. **Clone o Repositório do Plugin:** Abra um terminal e execute o seguinte comando para clonar o _plugin_ para o diretório de plugins do `oh-my-zsh`: `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions`
 
-2. **Adicione o Plugin ao Seu Arquivo `.zshrc`:** Você precisará adicionar uma linha ao seu arquivo `.zshrc` para carregar o plugin. Abra o arquivo `.zshrc` com um editor de texto: `sudo nano ~/.zshrc`
+2. **Adicione o Plugin ao Seu Arquivo `.zshrc`:** Você precisará adicionar uma linha ao seu arquivo `.zshrc` para carregar o _plugin_. Abra o arquivo `.zshrc` com um editor de texto: `sudo nano ~/.zshrc`
 
 3. **E adicione a seguinte linha no final do arquivo:**
 
@@ -232,9 +230,9 @@ Aqui estão as etapas para instalar o plugin `zsh-autosuggestions` sem usar o Oh
 
 6. **Verifique se Está Funcionando:** Após recarregar o arquivo `.zshrc`, comece a digitar um comando que você usou anteriormente. As sugestões devem aparecer automaticamente.
 
-Após realizar esses passos, quando você começar a digitar um comando no terminal, o plugin `zsh-autosuggestions` mostrará sugestões com base nos seus comandos anteriores, com a sugestão exibida em uma cor mais clara. Você pode aceitar a sugestão pressionando a tecla de seta para a direita.
+Após realizar esses passos, quando você começar a digitar um comando no terminal, o _plugin_ `zsh-autosuggestions` mostrará sugestões com base nos seus comandos anteriores, com a sugestão exibida em uma cor mais clara. Você pode aceitar a sugestão pressionando a tecla de seta para a direita.
 
-Espero que isso ajude a configurar as auto-sugestões no seu terminal `oh-my-zsh`. Se você encontrar algum problema, certifique-se de que o caminho para o script `zsh-autosuggestions`.zsh está correto e que o plugin foi clonado para o local correto.
+Espero que isso ajude a configurar as auto-sugestões no seu terminal `oh-my-zsh`. Se você encontrar algum problema, certifique-se de que o caminho para o _script_ `zsh-autosuggestions`.zsh está correto e que o _plugin_ foi clonado para o local correto.
 
 Se você estiver usando o `bash` e quiser um recurso similar, você precisaria de uma configuração diferente, já que o `zsh-autosuggestions` é específico para o `oh-my-zsh`. No `bash`, o recurso mais próximo é o `history search`, que pode ser habilitado com algumas configurações no arquivo `.bashrc`.
 
@@ -313,7 +311,7 @@ Para desinstalar o zsh e limpar as configurações no Ubuntu pelo terminal, voc�
 
 3. **Mudar o `shell` padrão de volta para o `bash`**: Para voltar para o `bash` como seu `shell` padrão, execute: `chsh -s /bin/bash`
 
-Lembre-se de que você precisará fechar e reabrir o terminal ou reiniciar a sessão para que as alterações entrem em vigor. Isso removerá o zsh e suas configurações do seu sistema.
+Lembre-se de que você precisará fechar e reabrir o terminal ou reiniciar a sessão para que as alterações entrem em vigor. Isso removerá o `zsh` e suas configurações do seu sistema.
 
 
 ## 7. Desinstalar o `oh-my-zsh`
@@ -336,7 +334,7 @@ Para desinstalar completamente o `oh-my-zsh` no `Linux Ubuntu`, você precisa se
 
 8. **Limpe os pacotes não mais necessários:** Após a desinstalação, é uma boa prática remover pacotes que foram automaticamente instalados para satisfazer as dependências de outros pacotes e que não são mais necessários: `sudo apt autoremove`
 
-9. **Opcional - Remova manualmente qualquer arquivo de configuração residuais:** Se você quiser garantir que todas as configurações personalizadas do `zsh` sejam removidas, pode precisar excluí-las manualmente. Arquivos de configuração do `zsh` geralmente estão localizados em seu diretório home, como .zshrc. Para removê-los, use: `rm ~/.zshrc`
+9. **Opcional - Remova manualmente qualquer arquivo de configuração residuais:** Se você quiser garantir que todas as configurações personalizadas do `zsh` sejam removidas, pode precisar excluí-las manualmente. Arquivos de configuração do `zsh` geralmente estão localizados em seu diretório home, como `.zshrc`. Para removê-los, use: `rm ~/.zshrc`
 
     E qualquer outro arquivo de configuração do `zsh` que você possa ter criado ou modificado.
 
@@ -350,4 +348,4 @@ Lembre-se de que esses comandos podem variar ligeiramente dependendo da sua conf
 
 [3] OPENAI. ***Comandos de manutenção do ubuntu.*** Disponível em: <https://chat.openai.com/c/4a8cfaa2-30d6-474d-821f-7047a6a39830>. ChatGPT. Acessado em: 15/12/2023 08:25.
 
-[4] USER: LEO VARGAS. Como personalizar o terminal do linux - mais produtivo e bonito. Disponĩvel em: <https://www.youtube.com/watch?v=zqrUlHA8jTA&t=1s>. Acessado em: 05/06/2024 16:26.
+[4] USER: LEO VARGAS. ***Como personalizar o terminal do linux - mais produtivo e bonito.*** Disponĩvel em: <https://www.youtube.com/watch?v=zqrUlHA8jTA&t=1s>. Acessado em: 05/06/2024 16:26.
