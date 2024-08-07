@@ -12,7 +12,7 @@ _This document contains the main commands for configuring/installing/use `oh-my-
 
 ### `shell`
 
-Um `shell` é uma interface de linha de comando que permite aos usuários interagirem com um sistema operacional por meio de comandos de texto. Ele interpreta os comandos inseridos pelo usuário e os executa, facilitando a manipulação de arquivos, a execução de programas e outras tarefas do sistema. Além disso, os shells também oferecem recursos avançados, como redirecionamento de entrada e saída, expansão de comandos e controle de processos. Exemplos comuns incluem o `Bash`, o `Zsh` e o `PowerShell`.
+Um `shell` é uma Interface de Linha de Comando (_Command Line Interface, CLI_) que permite aos usuários interagirem com um sistema operacional por meio de comandos de texto. Ele interpreta os comandos inseridos pelo usuário e os executa, facilitando a manipulação de arquivos, a execução de programas e outras tarefas do sistema. Além disso, os shells também oferecem recursos avançados, como redirecionamento de entrada e saída, expansão de comandos e controle de processos. Exemplos comuns incluem o `Bash`, o `Zsh` e o `PowerShell`.
 
 
 ### `bash`
@@ -80,7 +80,7 @@ Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu`, você pode seguir
     2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
     
 
-### Configurar/Instalar/Usar o `oh-my-zsh`
+### 1.1 Configurar/Instalar/Usar o `oh-my-zsh`
 
 Para configurar/instalar/usar o `oh-my-zsh` em um sistema `Linux Ubuntu`, você pode seguir estes passos:
 
@@ -90,10 +90,53 @@ Para configurar/instalar/usar o `oh-my-zsh` em um sistema `Linux Ubuntu`, você 
 
 3. **Instalar o `oh-my-zsh`**: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
-### Configurar/Instalar/Usar o `zinit`
+    **OBSERVAÇÂO(ÕES)**: O diretório para a pasta ou arquivo é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/.oh-my-zsh`
+    
+
+### 1.2 Configurar o `zsh` como seu `shell` padrão
+
+1. **Configurar o `zsh` como seu `shell` Padrão:** Para configurar o `zsh` como seu `shell` padrão, use (**NÃO** colocar o `sudo`!): `chsh -s $(which zsh)`
+
+    - Você precisará fazer _logout_ e _login_ novamente para que a mudança tenha efeito.
+
+2. **Criar o Arquivo .`zshrc`:** Se, por algum motivo, o arquivo `.zshrc` **NÃO** for criado automaticamente, você pode criá-lo manualmente: `sudo nano ~/.zshrc`
+
+    - Adicione as configurações que deseja e salve o arquivo.
+
+3. **Aplicar as alterações:** Para que as mudanças tenham efeito, você precisa recarregar o arquivo de configuração. Isso pode ser feito com o comando: `source ~/.zshrc`
+
+    Ou simplesmente feche e reabra o terminal.
+
+Esses passos devem ajudar a configurar o `zsh` com o tema e os plugins desejados. Se tiver dificuldades com algum plugin específico, pode ser útil consultar a documentação do Oh My `zsh` ou procurar ajuda específica para aquele plugin.
+
+
+### 1.3 Código completo para configurar/instalar/usar
+
+Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
+
+1. Abra o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
+
+2. Digite o seguinte comando e pressione `Enter`:
+
+    ```
+    sudo apt clean
+    sudo apt autoclean
+    sudo apt autoremove -y
+    sudo apt update
+    sudo apt --fix-broken install
+    sudo apt clean
+    sudo apt list --upgradable
+    sudo apt full-upgrade -y
+    sudo apt install zsh -y
+    ```
+
+
+### 2. Configurar/Instalar/Usar o `zinit`
 
 1. **Instalar o `zinit`**: `bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
 
+    **OBSERVAÇÂO(ÕES)**: O diretório para a pasta ou arquivo é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/.local/share/`
+    
 2. **Abrir o arquivo `~/.zshrc`**: `sudo nano ~/.zshrc`
 
 3. **Editar o arquivo `~/.zshrc`**:
@@ -105,16 +148,40 @@ Para configurar/instalar/usar o `oh-my-zsh` em um sistema `Linux Ubuntu`, você 
     zinit light zsh-users/zsh-completions
     ```
 
+    **OBSERVAÇÂO(ÕES)**: O diretório para a pasta ou arquivo é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/.local/share/`
+
+    Segue a lista de arquivos que a pasta deve possuir:
+
+    - `_local---zinit`
+    
+    - `zdharma-continuum---fast-syntax-highlighting`
+    
+    - `zdharma-continuum---zinit-annex-as-monitor`
+    
+    - `zdharma-continuum---zinit-annex-bin-gem-node`
+    
+    - `zdharma-continuum---zinit-annex-patch-dl`
+    
+    - `zdharma-continuum---zinit-annex-rust`
+    
+    - `zdharma---fast-syntax-highlighting`
+    
+    - `zsh-users---zsh-autosuggestions`
+    
+    - `zsh-users---zsh-completions`
+
 4. Fechar o `Terminal Emulator` e abrir novamente
 
 
-### Configurar/Instalar/Usar a fonte `fira code`
+### 3. Configurar/Instalar/Usar a fonte `fira code`
 
 1. **Criar diretório**: `mkdir ~/.fonts`
 
 2. **Baixar fonte**: `wget -P ~/.fonts 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/BitstreamVeraSansMono.zip'` 
 
 3. **Descompactar fonte**: `unzip ~/.fonts/BitstreamVeraSansMono.zip -d ~/.fonts`
+
+    **OBSERVAÇÂO(ÕES)**: O diretório para a pasta ou arquivo é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/` 
 
 4. **Instalar a fonte `firacode`**: `sudo apt install fonts-firacode -y`
 
@@ -127,9 +194,13 @@ Para configurar/instalar/usar o `oh-my-zsh` em um sistema `Linux Ubuntu`, você 
 8. No campo `Font` clicar na fonte e alterar para `Fira Code Regular`
 
 
-### Configurar/Instalar/Usar o tema `powerlevel10k`
+### 4. Configurar/Instalar/Usar o tema `powerlevel10k`
 
 1. **Instalar o tema `powerlevel10k`**: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
+
+    **OBSERVAÇÂO(ÕES)**: O diretório para a pasta ou arquivo é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/.oh-my-zsh/themes/`
+
+    1.1 Copiar a pasta também para o diretório: `/home/edenedfsls/`
 
 2. **Inserir o `powerlever10k` no arquivo de configuração do `zshrc`**: `echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
 
@@ -140,7 +211,7 @@ Para configurar/instalar/usar o `oh-my-zsh` em um sistema `Linux Ubuntu`, você 
 5. Fechar o `Terminal Emulator` e abrir novamente
 
 
-#### Configurar o `powerlevel10k`
+#### 5. Configurar o `powerlevel10k`
 
 1. Confirmar os símbos que estiver vendo para que a configuração reconheca e configure corretamente.
 
@@ -177,51 +248,15 @@ Para configurar/instalar/usar o `oh-my-zsh` em um sistema `Linux Ubuntu`, você 
 17. Em `Apply changes to ~/.zshrc` escolha a opção:  `(y) Yes (recommended).`
 
 
-#### Reconfigurar o `powerlevel10k`
+### 5.1 Ajustes
 
-1. Para reconfigurar o `Powerlevel10k` no `Zsh`, você pode executar o comando de configuração fornecido pelo próprio tema. Abra o terminal e digite o seguinte: `p10k configure`
-
-Isso iniciará o assistente de configuração do `Powerlevel10k`, onde você poderá escolher várias opções para personalizar o visual e o comportamento do seu `prompt` de comando. Se você tiver algum arquivo de configuração anterior, como `~/.p10k.zsh`, o assistente pode usar essas configurações como base ou você pode começar uma nova configuração do zero.
-
-### 1.1 Configurar o `oh-my-zsh` como seu `shell` padrão
-
-1. **Configurar o `oh-my-zsh` como seu `shell` Padrão:** Para configurar o `oh-my-zsh` como seu `shell` padrão, use (**NÃO** colocar o `sudo`!): `chsh -s $(which zsh)`
-
-    - Você precisará fazer logout e login novamente para que a mudança tenha efeito.
-
-2. **Criar o Arquivo .`zshrc`:** Se, por algum motivo, o arquivo `.zshrc` **NÃO** for criado automaticamente, você pode criá-lo manualmente: `sudo nano ~/.zshrc`
-
-    - Adicione as configurações que deseja e salve o arquivo.
-
-3. **Aplicar as alterações:** Para que as mudanças tenham efeito, você precisa recarregar o arquivo de configuração. Isso pode ser feito com o comando: `source ~/.zshrc`
-
-    Ou simplesmente feche e reabra o terminal.
-
-Esses passos devem ajudar a configurar o `oh-my-zsh` com o tema e os plugins desejados. Se tiver dificuldades com algum _plugin_ específico, pode ser útil consultar a documentação do Oh My `oh-my-zsh` ou procurar ajuda específica para aquele _plugin_.
-
-
-## 1. Ajustes
-
-### 1.1 Ajustar as cores do `Terminal Emulator`
+#### 5.1.1 Ajustar as cores do `Terminal Emulator`
 
 1. No `Terminal Emulator`, na barra de ferramentas, clicar em: `Edit`
 
 2. Clique em: `Preferences`
 
-3. Clique na aba `Appearence`
-
-    3.1 Em `Background` altere a opção para `Transparent background`
-
-    3.2 Em `Opacity` coloque em `0.85`
-
-4. Clique na aba `Colors`
-
-    4.1 Em `Presets` selecione `Tango`
-
-5. Em `General`, em `Text color:` selecione a cor `Dourada` para que fique visível.
-
-
-### 1.2 Código completo para configurar/instalar/usar
+3. Clique na ### 1.2 Código completo para configurar/instalar/usar
 
 Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
 
@@ -240,9 +275,26 @@ Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` sem precisar digit
     sudo apt full-upgrade -y
     sudo apt install zsh -y
     ```
+aba `Appearence`
+
+    3.1 Em `Background` altere a opção para `Transparent background`
+
+    3.2 Em `Opacity` coloque em `0.85`
+
+4. Clique na aba `Colors`
+
+    4.1 Em `Presets` selecione `Tango`
+
+5. Em `General`, em `Text color:` selecione a cor `Dourada` para que fique visível.
 
 
-## 2. Mudar o seu `shell` de volta para o `bash` (ou outro `shell` de sua preferência) com o comando
+#### 5.2 Reconfigurar o `powerlevel10k`
+
+1. Para reconfigurar o `Powerlevel10k` no `Zsh`, você pode executar o comando de configuração fornecido pelo próprio tema. Abra o terminal e digite o seguinte: `p10k configure`
+
+Isso iniciará o assistente de configuração do `Powerlevel10k`, onde você poderá escolher várias opções para personalizar o visual e o comportamento do seu `prompt` de comando. Se você tiver algum arquivo de configuração anterior, como `~/.p10k.zsh`, o assistente pode usar essas configurações como base ou você pode começar uma nova configuração do zero.
+
+## 6. Mudar o seu `shell` de volta para o `bash` (ou outro `shell` de sua preferência) com o comando
 
 1. Finalmente, mude o seu `shell` de volta para o `bash` (ou outro `shell` de sua preferência) com o comando: `sudo chsh -s /bin/bash`
 
@@ -251,7 +303,7 @@ Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` sem precisar digit
 2. **Iniciar o `bash` Manualmente:** Caso NÃO funcione, como solução temporária, você pode iniciar o `bash` manualmente em um terminal do `oh-my-zsh`, simplesmente digitando bash. Isso não muda seu `shell` padrão, mas inicia uma sessão do `bash` naquele terminal específico.
 
 
-## 3. Alterar a opacidade/transparência do `Terminal Emulator`
+## 7. Alterar a opacidade/transparência do `Terminal Emulator`
 
 A referência específica à transparência padrão do terminal no `Kali Linux` não é mencionada diretamente nas fontes. No entanto, uma prática comum é definir a transparência do painel do terminal para cerca de `5%`, para dar uma aparência estilizada, como mencionado em um guia de personalização do ambiente de desktop `xfce` no `Kali Linux​​`. Isso indica que a transparência padrão pode ser definida para um valor baixo ou até mesmo desativada por padrão, com a opção de ajuste conforme a preferência do usuário.
 
@@ -265,7 +317,26 @@ No entanto, se você deseja ajustar ou verificar a transparência do seu termina
 
 É importante observar que essas configurações podem variar dependendo do emulador de terminal que você está usando. Além disso, a capacidade de ajustar a transparência pode depender de outros fatores do sistema, como os efeitos gráficos habilitados no seu ambiente de desktop.
 
-## 7. Desinstalar o `oh-my-zsh`
+## 8. Adicionar o ícone da cobra (`Python`) no _prompt_ do tema `Powerlevel10k` em `zsh` 
+
+Para adicionar o ícone da cobra (`Python`) no _prompt_ do tema `Powerlevel10k` em `zsh`, você precisa configurar o segmento do ambiente {{Python}} (como o `pyenv`, `virtualenv`, `anaconda` etc.) para incluir um ícone. Aqui estão os passos gerais:
+
+1. **Acesse o Arquivo de Configuração**: Abra o arquivo `~/.p10k.zsh` em um editor de texto. Esse arquivo é gerado pelo `Powerlevel10k` quando você configura o tema pela primeira vez com `p10k configure`.
+
+2. **Localize o Segmento de Configuração Python**: Procure a seção que configura o ambiente `Python` que você está usando. Por exemplo, se você estiver usando `virtualenv`, procure por configurações que começam com `POWERLEVEL9K_VIRTUALENV_`.
+
+3. **Adicionar ou modificar o ícone**: Adicione ou altere a linha que define o ícone. Por exemplo, para `virtualenv`, você pode adicionar: `typeset -g POWERLEVEL9K_VIRTUALENV_VISUAL_IDENTIFIER_EXPANSION='🐍'`
+
+    Isso definirá o ícone da cobra para o ambiente virtual `Python`.
+
+4. **Aplicar as mudanças**: Depois de fazer as alterações, salve o arquivo e reinicie o `Terminal Emulator` ou recarregue sua configuração com: `source ~/.zshrc`
+
+5. Reinicie o computador.
+
+Se o ícone da cobra não aparecer após essas configurações, certifique-se de que seu `Terminal Emulator` suporta emojis e que as configurações do `Powerlevel10k` estão corretas para exibir ícones.
+
+
+## 8. Desinstalar o `oh-my-zsh`
 
 Para desinstalar completamente o `oh-my-zsh` no `Linux Ubuntu`, você precisa seguir algumas etapas. Primeiro, é importante remover o pacote `oh-my-zsh` em si e, em seguida, alterar o `shell` padrão para o usuário de volta ao `shell` anterior (geralmente `bash`), caso o `oh-my-zsh` tenha sido configurado como o `shell` padrão. Aqui estão as etapas detalhadas:
 
@@ -289,7 +360,7 @@ Para desinstalar completamente o `oh-my-zsh` no `Linux Ubuntu`, você precisa se
 
     E qualquer outro arquivo de configuração do `zsh` que você possa ter criado ou modificado.
 
-Lembre-se de que esses comandos podem variar ligeiramente dependendo da sua configuração específica e da versão do `Ubuntu`. Certifique-se de ter backups de quaisquer dados ou configurações importantes antes de proceder com a desinstalação.
+Lembre-se de que esses comandos podem variar ligeiramente dependendo da sua configuração específica e da versão do `Linux Ubuntu`. Certifique-se de ter _backups_ de quaisquer dados ou configurações importantes antes de proceder com a desinstalação.
 
 ## Referências
 
