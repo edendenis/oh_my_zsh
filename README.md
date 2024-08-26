@@ -32,7 +32,7 @@ O `oh-my-zsh`, ou `Z Shell`, é um interpretador de `shell` de código aberto e 
 
 ### `powerlevel10k`
 
-O `Powerlevel10k` é um tema altamente configurável para o terminal `Zsh`, conhecido por sua velocidade e eficiência. Ele oferece uma experiência personalizável ao usuário, com uma configuração inicial rápida e opções avançadas para ajustar o estilo e os elementos exibidos no prompt de comando. O `Powerlevel10`k suporta ícones, diferentes estilos de prompt, exibição de informações contextuais e é projetado para ser rápido mesmo em ambientes com muitos plugins e configurações adicionais.
+O `Powerlevel10k` é um tema altamente configurável para o terminal `Zsh`, conhecido por sua velocidade e eficiência. Ele oferece uma experiência personalizável ao usuário, com uma configuração inicial rápida e opções avançadas para ajustar o estilo e os elementos exibidos no _prompt_ de comando. O `Powerlevel10`k suporta ícones, diferentes estilos de _prompt_, exibição de informações contextuais e é projetado para ser rápido mesmo em ambientes com muitos _plugins_ e configurações adicionais.
 
 
 ### `zinit`
@@ -63,21 +63,21 @@ Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu`, você pode seguir
 
 2. Certifique-se de que seu sistema esteja limpo e atualizado.
 
-    2.1 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
+    2.1 **Limpar o `cache` do gerenciador de pacotes `apt`**: Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
     
-    2.2 Remover pacotes `.deb` antigos ou duplicados do cache local. É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando: `sudo apt autoclean`
+    2.2 **Remover pacotes `.deb` antigos ou duplicados do `cache` local**: É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando: `sudo apt autoclean`
 
-    2.3 Remover pacotes que foram automaticamente instalados para satisfazer as dependências de outros pacotes e que não são mais necessários. Digite o seguinte comando: `sudo apt autoremove -y`
+    2.3 **Remover pacotes que foram automaticamente instalados para satisfazer as dependências de outros pacotes e que não são mais necessários**: Digite o seguinte comando: `sudo apt autoremove -y`
 
-    2.4 Buscar as atualizações disponíveis para os pacotes que estão instalados em seu sistema. Digite o seguinte comando e pressione `Enter`: `sudo apt update`
+    2.4 **Buscar as atualizações disponíveis para os pacotes que estão instalados em seu sistema**: Digite o seguinte comando e pressione `Enter`: `sudo apt update`
 
     2.5 **Corrigir pacotes quebrados**: Isso atualizará a lista de pacotes disponíveis e tentará corrigir pacotes quebrados ou com dependências ausentes: `sudo apt --fix-broken install`
 
-    2.6 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
+    2.6 **Limpar o `cache` do gerenciador de pacotes `apt`**: Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
     
-    2.7 Para ver a lista de pacotes a serem atualizados, digite o seguinte comando e pressione `Enter`:  `sudo apt list --upgradable`
+    2.7 **Para ver a lista de pacotes a serem atualizados**: Digite o seguinte comando e pressione `Enter`:  `sudo apt list --upgradable`
 
-    2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
+    2.8 **Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`**: Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
     
 
 ### 1.1 Configurar/Instalar/Usar o `oh-my-zsh`
@@ -90,7 +90,7 @@ Para configurar/instalar/usar o `oh-my-zsh` em um sistema `Linux Ubuntu`, você 
 
 3. **Instalar o `oh-my-zsh`**: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
-    **OBSERVAÇÂO(ÕES)**: O diretório para a pasta ou arquivo é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/`
+    **OBSERVAÇÂO(ÕES)**: O diretório para a(s) pasta(s) ou arquivo(s) é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/`
 
     Você pode usar o código a seguir para copiar a pasta ou o arquivo para o diretório: `sudo cp -R /home/edenedfsls/Documents/Downloads/unix/ubuntu/oh_my_zsh/docs/ /home/edenedfsls/`
     
@@ -139,7 +139,7 @@ Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` sem precisar digit
 
 1. **Instalar o `zinit`**: `bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
 
-    **OBSERVAÇÂO(ÕES)**: O diretório para a pasta ou arquivo é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/.local/share/`
+    **OBSERVAÇÂO(ÕES)**: O diretório para a(s) pasta(s) ou arquivo(s) é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/.local/share/`
 
     Você pode usar o código a seguir para copiar a pasta ou o arquivo para o diretório: `sudo cp -R /home/edenedfsls/Documents/Downloads/unix/ubuntu/oh_my_zsh/docs/ /home/edenedfsls/.local/share/`
     
@@ -154,7 +154,7 @@ Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` sem precisar digit
     zinit light zsh-users/zsh-completions
     ```
 
-    **OBSERVAÇÂO(ÕES)**: O diretório para a pasta ou arquivo é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/.local/share/`
+    **OBSERVAÇÂO(ÕES)**: O diretório para a(s) pasta(s) ou arquivo(s) é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/.local/share/`
 
     Segue a lista de arquivos que a pasta deve possuir:
 
@@ -197,7 +197,7 @@ Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` sem precisar digit
 
 3. **Descompactar fonte**: `unzip ~/.fonts/BitstreamVeraSansMono.zip -d ~/.fonts`
 
-    **OBSERVAÇÂO(ÕES)**: O diretório para a pasta ou arquivo é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/`
+    **OBSERVAÇÂO(ÕES)**: O diretório para a(s) pasta(s) ou arquivo(s) é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/`
 
     Você pode usar o código a seguir para copiar a pasta ou o arquivo para o diretório: `sudo cp -R /home/edenedfsls/Documents/Downloads/unix/ubuntu/oh_my_zsh/docs/.fonts/ /home/edenedfsls/.fonts/` 
 
@@ -216,7 +216,7 @@ Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` sem precisar digit
 
 1. **Instalar o tema `powerlevel10k`**: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
 
-    **OBSERVAÇÂO(ÕES)**: O diretório para a pasta ou arquivo é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/.oh-my-zsh/themes/`
+    **OBSERVAÇÂO(ÕES)**: O diretório para a(s) pasta(s) ou arquivo(s) é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/.oh-my-zsh/themes/`
 
     1.1 Copiar a pasta também para o diretório: `/home/edenedfsls/`
 
@@ -250,7 +250,7 @@ Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` sem precisar digit
     
     - `.zshrc`
        
-    **OBSERVAÇÂO(ÕES)**: O diretório para a pasta ou arquivo é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/`
+    **OBSERVAÇÂO(ÕES)**: O diretório para a(s) pasta(s) ou arquivo(s) é indicado a seguir, conferir se no diretório se a(s) pasta(s) e/ou o(s) arquivo(s) existe(m), se não, copiar da pasta `docs` para o diretório: `/home/edenedfsls/`
 
     Você pode usar o código a seguir para copiar a pasta ou o arquivo para o diretório:
     
@@ -278,39 +278,49 @@ Para configurar/instalar/usar o `oh-my-zsh` no `Linux Ubuntu` sem precisar digit
 
 #### 4.2 Configurar o `powerlevel10k`
 
-1. Confirmar os símbos que estiver vendo para que a configuração reconheca e configure corretamente.
+1. Confirmar os símbolos que estiver vendo para que a configuração reconheca e configure corretamente.
 
-2. Em `Prompt Style` escolha a opção:  `(3) Rainbow.`
+2. Em `Does this look like a diamond (rotated square)? reference: https://graphemica.com/%E2%97%86 --->    <---` escolha a opção: `(y) Yes`
 
-3. Em `Character Set` escolha a opção:  `(1) Unicode.`
+3. Em `Does this look like a lock? reference: https://fontawesome.com/icons/lock --->    <---` escolha a opção: `(y) Yes`
 
-4. Em `Show current time?` escolha a opção:  `(2) 24-hour format.`
+4. Em `Does this look like an upwards arrow? reference: https://graphemica.com/%F0%9F%A0%89 --->  󰜷  <---` escolha a opção: `(y) Yes`
 
-5. Em `Prompt Separators` escolha a opção:  `(1) Angled.`
+5. Em `What digit is the downwards arrow pointing at? 󰜴 󰜴 󰜴 󰜮 111222` escolha a opção: `(1)  It is pointing at '1'.`
 
-6. Em `Prompt Heads` escolha a opção:  `(3) Sharp.`
+6. Em `Do all these icons fit between the crosses? --->  XXXXXXXXX  <--` escolha a opção: `(y)  Yes. Icons are very close to the crosses but there is no overlap.`
 
-7. Em `Prompt Tails` escolha a opção:  `(2) Bluerred.`
+7. Em `Prompt Style` escolha a opção:  `(3) Rainbow.`
 
-8. Em `Prompt Height` escolha a opção:  `(2) Two lines.`
+8. Em `Character Set` escolha a opção:  `(1) Unicode.`
 
-9. Em `Prompt Connection` escolha a opção:  `(3) Solid.`
+9. Em `Show current time?` escolha a opção:  `(2) 24-hour format.`
 
-10. Em `Prompt Frame` escolha a opção:  `(2) Left.`
+10. Em `Prompt Separators` escolha a opção:  `(1) Angled.`
 
-11. Em `Connection & Frame Color` escolha a opção:  `(1) Lightest.`
+11. Em `Prompt Heads` escolha a opção:  `(3) Sharp.`
 
-12. Em `Prompt Spacing` escolha a opção:  `(2) Sparse.`
+12. Em `Prompt Tails` escolha a opção:  `(2) Bluerred.`
 
-13. Em `Icons` escolha a opção:  `(2) Many icons.`
+13. Em `Prompt Height` escolha a opção:  `(2) Two lines.`
 
-14. Em `Prompt Flow` escolha a opção:  `(2) Fluent.`
+14. Em `Prompt Connection` escolha a opção:  `(3) Solid.`
 
-15. Em `Enable Transient Prompt` escolha a opção:  `(n) No.`
+15. Em `Prompt Frame` escolha a opção:  `(2) Left.`
 
-16. Em `Instant Prompt Mode` escolha a opção:  `(1) Verbose (recommended).`
+16. Em `Connection & Frame Color` escolha a opção:  `(1) Lightest.`
 
-17. Em `Apply changes to ~/.zshrc` escolha a opção:  `(y) Yes (recommended).`
+17. Em `Prompt Spacing` escolha a opção:  `(2) Sparse.`
+
+18. Em `Icons` escolha a opção:  `(2) Many icons.`
+
+19. Em `Prompt Flow` escolha a opção:  `(2) Fluent.`
+
+20. Em `Enable Transient Prompt` escolha a opção:  `(n) No.`
+
+21. Em `Instant Prompt Mode` escolha a opção:  `(1) Verbose (recommended).`
+
+22. Em `Apply changes to ~/.zshrc` escolha a opção:  `(y) Yes (recommended).`
 
 
 ### 4.3 Ajustes
